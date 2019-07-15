@@ -12,10 +12,17 @@
             <li><a href="about_me.html">About Me</a></li>
             <li><a href="about_mentor.html">About My Mentor</a></li>
             <li><a href="journal.html">Journal</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="final_report.html">Final Report</a></li>
         </ul>
     </head>
     <body id="page">
         <h1>Journal</h1>
-        <p>This journal will be updated as time goes on</p>
+        <h2 class="journal-week">Week 1 (May 27th)</h2>
+        <p>This week, I made my first attempt of determining what project I wanted to work on. My initial idea was based off of a technique I had seen used in the training of an OpenAI robot hand that <a href="https://arxiv.org/pdf/1808.00177.pdf" target="_blank">learned to turn a cube</a> via reinforcement learning inside of vitual reality. One of the key insights into how to get a system like this to work, is that they used domain randomization. This means that many of the colors and positions and other physical properties of things within the simulation were randomized between trials.</p>
+        <img src="openai_domain_randomization.jpg" style="width:200px;height:auto;">
+
+        <p>This forced the AI mechanisms they were using to generalize over a range of values, which helps them to be more robust in the real world. I wanted to explore ideas to see if I could come up with a process that would create a domain randomizer for any domain. That is, instead of OpenAI researchers determining what properties should be changed and within what ranges, they should be able to feed my program video feeds of the real situation, and the program would be able to determine properties that should be changed and within what range in order to have the best overall simulator for training the hand controller.</p>
+        <p>This idea led me straight into researching adversarial attacks on neural networks. Why? Well, adversarial attacks are done by <i>very slightly</i> changing an input image in order to trick a neural network into picking a different answer. (<a href="https://qr.ae/TWnY10" target="_blank">This Quora answer</a> gives a decent overview of this phenomena.)</p>
     </body>
 </html>

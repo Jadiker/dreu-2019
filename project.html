@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="nav_bar.css" rel="stylesheet">
+        <link href="page.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <title>
+            London DREU Website
+        </title>
+        <ul id="navbar">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="about_me.html">About Me</a></li>
+            <li><a href="about_mentor.html">About My Mentor</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="final_report.html">Final Report</a></li>
+        </ul>
+    </head>
+    <body id="page">
+        <p>My project for this summer is to make progress towards a novel method of style transfer in music.</p>
+        <p>In technical terms, I'm attempting to use a version of a <a href="https://arxiv.org/abs/1704.06888" target="_blank">Time-Contrastive Network</a> (TCN) that uses songs and covers of those songs as training data for an encoder, and then outputs MIDI data via reinforcement learning trained using values from the encoder. The ultimate goal is to obtain output similar in quality to <a href="https://research.fb.com/wp-content/uploads/2018/05/A-Universal-Music-Translation-Network.pdf" target="_blank">Facebook's Universal Music Translation Network</a>, but with MIDI as the output, rather than <a href="http://www.digitizationguidelines.gov/term.php?term=waveformsound" target="_blank">waveform audio</a>.</p>
+        <p>However, I think that completing that goal would take much longer than the 10 weeks I have, so I'm settling for a smaller goal of syncing music covers. Just like Google's TCN network was able to sync videos of people pouring liquid into cups, my network should be able to sync music covers so that the same parts of the song play at the same time. This is the first step towards creating an AI that can create MIDI music of a particular song.</p>
+        <p><b>In non-technical terms:</b></p>
+        <p>The ultimate goal is to create an AI where I give it a piece of music and a set of instruments, ask it to play that song with those instruments, and it spits out a MIDI music file that sounds like the given song with those instruments. However, I think coming up with an AI to do that would take too long. So, instead, I'm just trying to make an AI where you give it the same piece of music played in two different ways (e.g. the original song and a "cover" of that song), and the AI will sync up the two songs so that the two versions of the song have the same portions of the song playing at the same time. The idea is that once I'm able to do that, the computer should be able to learn how to create music files so that the new music file it creates is also synced to the original song. This will allow it to play the same song with different instruments.</p>
+        <p>In order to get a song and a cover of that song to sync, I have to create an AI called an encoder. An encoder is an AI where you feed it some data, and it comes up with a relatively small list of numbers to represent that data. For this encoder, I feed it a piece of audio music, and it comes up with a list of numbers to represent that audio. The goal of the encoder I'm creating is to make it so that if I give it the same part (e.g. the chorus) of an original song and then a cover of that song, the list of numbers it gives back should be the same for both the original song and the cover. It also should make it so that if I give it the same part of two different songs, the list of numbers it gives back is different for those two songs.</p>
+    </body>
+</html>
